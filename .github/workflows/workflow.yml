@@ -1,0 +1,60 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  setup:
+    name: Download Dependencies
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: Checkout code 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      
+      - name: Cache Node Modules
+        uses: actions/cache@v3
+        id: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: npm-${{ hashFiles('**/package-lock.json')}}
+
+      - name: Install Node Modules if cache not present
+        run: npm install
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        
+  test:
+    name: 'Unit Tests'
+    runs-on: ubuntu-latest
+    needs: setup
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+      
+      - name: Restore Node Modules from cache
+        uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: npm-${{ hashFiles('**/package-lock.json')}}
+
+      - name: Jest 
+        run: npm run test:ci
+    
+    
+
+
