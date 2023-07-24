@@ -1,4 +1,4 @@
-interface LoginProps {
+export interface LoginProps {
   email: string;
   password: string | string[];
 }
@@ -27,7 +27,7 @@ export default function login_validate(values: LoginProps) {
   return errors;
 }
 
-interface RegisterProps {
+export interface RegisterProps {
   username: string | string[];
   email: string;
   password: string | string[];
@@ -68,7 +68,7 @@ export function registerValidate(values: RegisterProps) {
     errors.cpassword = "Required";
   } else if (values.password !== values.cpassword) {
     errors.cpassword = "Password Not Match...!";
-  } else if (values.cpassword.includes(" ")) {
+  } else if ((!values.password) && (values.cpassword.includes(" "))) {
     errors.cpassword = "Invalid Confirm Password";
   }
 

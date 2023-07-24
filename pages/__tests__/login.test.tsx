@@ -1,18 +1,19 @@
-import React from 'react'
-import Login from '@/pages/login';
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect'; 
+import { Login } from '@/pages/Login';
 
-
-describe('Login Page Test',  () => {
-    it('layout is rendered', () => {
-        const root = render(<Login />)
-        const emailInput = screen.getByTestId('email')
-        const passwordInput = screen.getByTestId('password')
-        const login_btn = screen.getByTestId('login_btn')
-        expect(emailInput).toBeVisible()
-        expect(passwordInput).toBeVisible()
-        expect(login_btn).toBeInTheDocument()
-        expect(root).toMatchSnapshot()
-    })
-})
+describe('Login component', () => {
+  test('renders without errors', () => {
+    const root = render(<Login />);
+    expect(screen.getByText('Explore')).toBeInTheDocument();
+    expect(root).toMatchSnapshot();
+  });
+  test('form validation shows error for invalid password', async () => {
+    const root = render(<Login />);
+    fireEvent.change(screen.getByTestId('password'), { target: { value: 'short' } });
+    fireEvent.click(screen.getByTestId('login_btn'));
+    expect(await screen.findByText('Must be greater then 8 and less then 20 characters long')).toBeInTheDocument();
+    expect(root).toMatchSnapshot();
+  });
+});

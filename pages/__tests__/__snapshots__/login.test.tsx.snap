@@ -1,6 +1,469 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login Page Test layout is rendered 1`] = `
+exports[`Login component form validation shows error for invalid password 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex h-screen bg-blue-900"
+      >
+        <div
+          class="m-auto bg-slate-50 rounded-md w-3/5 grid lg:grid-cols-2 h-max"
+        >
+          <div
+            class="imgStyle"
+          >
+            <div
+              class="cartoonImg"
+            />
+            <div
+              class="cloud_one"
+            />
+            <div
+              class="cloud_two"
+            />
+          </div>
+          <div
+            class="right flex flex-col justify-evenly"
+          >
+            <div
+              class="text-center py-10"
+            >
+              <section
+                class="w-3/4 mx-auto flex flex-col gap-10"
+              >
+                <div
+                  class="title"
+                >
+                  <h1
+                    class="text-gray-800 text-4xl font-bold py-4"
+                  >
+                    Explore
+                  </h1>
+                  <p
+                    class="w-3/4 mx-auto text-gray-400"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, officia?
+                  </p>
+                </div>
+                <form
+                  class="flex flex-col gap-5"
+                >
+                  <div
+                    class="input_group border-rose-600"
+                  >
+                    <input
+                      class="input_text"
+                      data-testid="email"
+                      name="email"
+                      placeholder="Email"
+                      type="email"
+                      value=""
+                    />
+                    <span
+                      class="icon flex items-center px-4"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        fill="currentColor"
+                        height="25"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 20 20"
+                        width="25"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <span
+                    class="text-rose-500"
+                  >
+                    Required
+                  </span>
+                  <div
+                    class="input_group border-rose-600"
+                  >
+                    <input
+                      class="input_text"
+                      data-testid="password"
+                      name="password"
+                      placeholder="password"
+                      type="password"
+                      value="short"
+                    />
+                    <span
+                      class="icon flex items-center px-4"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        fill="currentColor"
+                        height="25"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 20 20"
+                        width="25"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6.625 2.655A9 9 0 0119 11a1 1 0 11-2 0 7 7 0 00-9.625-6.492 1 1 0 11-.75-1.853zM4.662 4.959A1 1 0 014.75 6.37 6.97 6.97 0 003 11a1 1 0 11-2 0 8.97 8.97 0 012.25-5.953 1 1 0 011.412-.088z"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M5 11a5 5 0 1110 0 1 1 0 11-2 0 3 3 0 10-6 0c0 1.677-.345 3.276-.968 4.729a1 1 0 11-1.838-.789A9.964 9.964 0 005 11zm8.921 2.012a1 1 0 01.831 1.145 19.86 19.86 0 01-.545 2.436 1 1 0 11-1.92-.558c.207-.713.371-1.445.49-2.192a1 1 0 011.144-.83z"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M10 10a1 1 0 011 1c0 2.236-.46 4.368-1.29 6.304a1 1 0 01-1.838-.789A13.952 13.952 0 009 11a1 1 0 011-1z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <span
+                    class="text-rose-500"
+                  >
+                    Must be greater then 8 and less then 20 characters long
+                  </span>
+                  <div
+                    class="input-button"
+                  >
+                    <button
+                      class="button"
+                      data-testid="login_btn"
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                  </div>
+                  <div
+                    class="input-button"
+                  >
+                    <button
+                      class="button_custom"
+                      type="button"
+                    >
+                      Sign In with Google
+                       
+                      <img
+                        alt="Google SvG"
+                        data-nimg="1"
+                        decoding="async"
+                        height="20"
+                        loading="lazy"
+                        src="/assets/google.svg"
+                        style="color: transparent;"
+                        width="20"
+                      />
+                    </button>
+                  </div>
+                  <div
+                    class="input-button"
+                  >
+                    <button
+                      class="button_custom"
+                      type="button"
+                    >
+                      Sign In with Github
+                       
+                      <img
+                        alt="GitHub SvG"
+                        data-nimg="1"
+                        decoding="async"
+                        height="25"
+                        loading="lazy"
+                        src="/assets/github.svg"
+                        style="color: transparent;"
+                        width="25"
+                      />
+                    </button>
+                  </div>
+                </form>
+                <p
+                  class="text-center text-gray-400 "
+                >
+                  dont have an account yet?
+                   
+                  <a
+                    class="text-blue-700"
+                    href="/register"
+                  >
+                    Sign Up
+                  </a>
+                </p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex h-screen bg-blue-900"
+    >
+      <div
+        class="m-auto bg-slate-50 rounded-md w-3/5 grid lg:grid-cols-2 h-max"
+      >
+        <div
+          class="imgStyle"
+        >
+          <div
+            class="cartoonImg"
+          />
+          <div
+            class="cloud_one"
+          />
+          <div
+            class="cloud_two"
+          />
+        </div>
+        <div
+          class="right flex flex-col justify-evenly"
+        >
+          <div
+            class="text-center py-10"
+          >
+            <section
+              class="w-3/4 mx-auto flex flex-col gap-10"
+            >
+              <div
+                class="title"
+              >
+                <h1
+                  class="text-gray-800 text-4xl font-bold py-4"
+                >
+                  Explore
+                </h1>
+                <p
+                  class="w-3/4 mx-auto text-gray-400"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, officia?
+                </p>
+              </div>
+              <form
+                class="flex flex-col gap-5"
+              >
+                <div
+                  class="input_group border-rose-600"
+                >
+                  <input
+                    class="input_text"
+                    data-testid="email"
+                    name="email"
+                    placeholder="Email"
+                    type="email"
+                    value=""
+                  />
+                  <span
+                    class="icon flex items-center px-4"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      fill="currentColor"
+                      height="25"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 20 20"
+                      width="25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <span
+                  class="text-rose-500"
+                >
+                  Required
+                </span>
+                <div
+                  class="input_group border-rose-600"
+                >
+                  <input
+                    class="input_text"
+                    data-testid="password"
+                    name="password"
+                    placeholder="password"
+                    type="password"
+                    value="short"
+                  />
+                  <span
+                    class="icon flex items-center px-4"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      fill="currentColor"
+                      height="25"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 20 20"
+                      width="25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M6.625 2.655A9 9 0 0119 11a1 1 0 11-2 0 7 7 0 00-9.625-6.492 1 1 0 11-.75-1.853zM4.662 4.959A1 1 0 014.75 6.37 6.97 6.97 0 003 11a1 1 0 11-2 0 8.97 8.97 0 012.25-5.953 1 1 0 011.412-.088z"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M5 11a5 5 0 1110 0 1 1 0 11-2 0 3 3 0 10-6 0c0 1.677-.345 3.276-.968 4.729a1 1 0 11-1.838-.789A9.964 9.964 0 005 11zm8.921 2.012a1 1 0 01.831 1.145 19.86 19.86 0 01-.545 2.436 1 1 0 11-1.92-.558c.207-.713.371-1.445.49-2.192a1 1 0 011.144-.83z"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M10 10a1 1 0 011 1c0 2.236-.46 4.368-1.29 6.304a1 1 0 01-1.838-.789A13.952 13.952 0 009 11a1 1 0 011-1z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <span
+                  class="text-rose-500"
+                >
+                  Must be greater then 8 and less then 20 characters long
+                </span>
+                <div
+                  class="input-button"
+                >
+                  <button
+                    class="button"
+                    data-testid="login_btn"
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                </div>
+                <div
+                  class="input-button"
+                >
+                  <button
+                    class="button_custom"
+                    type="button"
+                  >
+                    Sign In with Google
+                     
+                    <img
+                      alt="Google SvG"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      src="/assets/google.svg"
+                      style="color: transparent;"
+                      width="20"
+                    />
+                  </button>
+                </div>
+                <div
+                  class="input-button"
+                >
+                  <button
+                    class="button_custom"
+                    type="button"
+                  >
+                    Sign In with Github
+                     
+                    <img
+                      alt="GitHub SvG"
+                      data-nimg="1"
+                      decoding="async"
+                      height="25"
+                      loading="lazy"
+                      src="/assets/github.svg"
+                      style="color: transparent;"
+                      width="25"
+                    />
+                  </button>
+                </div>
+              </form>
+              <p
+                class="text-center text-gray-400 "
+              >
+                dont have an account yet?
+                 
+                <a
+                  class="text-blue-700"
+                  href="/register"
+                >
+                  Sign Up
+                </a>
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Login component renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

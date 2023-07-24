@@ -1,21 +1,37 @@
-import React from "react";
-import Register from "../register";
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect'; 
+import Register from '@/pages/register';
 
-describe("Register Page Test", () => {
-  it("layout is rendered", () => {
-    const root = render(<Register />)
-    const username = screen.getByTestId("username");
-    const emailInput = screen.getByTestId("email");
-    const passwordInput = screen.getByTestId("password");
-    const cPasswordInput = screen.getByTestId("confirm_password");
-    const signup_btn = screen.getByTestId("signup_btn");
-    expect(username).toBeVisible();
-    expect(emailInput).toBeVisible();
-    expect(passwordInput).toBeVisible();
-    expect(cPasswordInput).toBeVisible();
-    expect(signup_btn).toBeInTheDocument();
+describe('Register component', () => {
+  test('renders without errors', () => {
+    const root = render(<Register />);
+    expect(screen.getByText('Register')).toBeInTheDocument();
+    expect(root).toMatchSnapshot();
+  });
+
+  test('form validation shows error for invalid username', async () => {
+    const root = render(<Register />);
+    fireEvent.change(screen.getByTestId('username'), { target: { value: 'invalid username' } });
+    fireEvent.click(screen.getByTestId('signup_btn'));
+    expect(await screen.findByText('Invalid Username...!')).toBeInTheDocument();
+    expect(root).toMatchSnapshot();
+  });
+
+  test('form validation shows error for invalid password', async () => {
+    const root = render(<Register />);
+    fireEvent.change(screen.getByTestId('password'), { target: { value: 'short' } });
+    fireEvent.click(screen.getByTestId('signup_btn'));
+    expect(await screen.findByText('Must be greater then 8 and less then 20 characters long')).toBeInTheDocument();
+    expect(root).toMatchSnapshot();
+  });
+
+  test('form validation shows error for mismatching passwords', async () => {
+    const root = render(<Register />);
+    fireEvent.change(screen.getByTestId('password'), { target: { value: 'validPassword123' } });
+    fireEvent.change(screen.getByTestId('confirm_password'), { target: { value: 'differentPassword' } });
+    fireEvent.click(screen.getByTestId('signup_btn'));
+    expect(await screen.findByText('Password Not Match...!')).toBeInTheDocument();
     expect(root).toMatchSnapshot();
   });
 });
